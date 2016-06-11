@@ -44,6 +44,8 @@ class TabBarViewController: UIViewController {
         //set the size of the view to that of the content view
         vc.view.frame = contentView.bounds
         contentView.addSubview(vc.view)
+        
+        //Call the viewDidAppear method of the ViewController you are adding using but calling didMoveToParentViewController
         vc.didMoveToParentViewController(self)
 
     }
@@ -84,6 +86,10 @@ class TabBarViewController: UIViewController {
         trendingViewController.didMoveToParentViewController(self)
         
         viewControllers = [homeViewController, searchViewController, composeViewController, acctViewController, trendingViewController]
+        
+        //Set the initial view
+        buttons[selectedIndex].selected = true
+        didPressTab(buttons[selectedIndex])
 
     }
 
