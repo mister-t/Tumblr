@@ -22,6 +22,32 @@ class TabBarViewController: UIViewController {
     var acctViewController: UIViewController! //view controller for the 'account' button
     var trendingViewController: UIViewController! //view controller for the 'trending' button
     
+    @IBAction func didPressTab(sender: UIButton) {
+
+        //save previous selected index
+        let previousIndex = selectedIndex
+        selectedIndex = sender.tag
+        print("button tabbed: \(selectedIndex)")
+        buttons[previousIndex].selected = false
+        
+        //erase previous view
+        let previousVC = viewControllers[previousIndex]
+        previousVC.willMoveToParentViewController(nil)
+        previousVC.view.removeFromSuperview()
+        previousVC.removeFromParentViewController()
+        
+        //set selected index and set current view
+        sender.selected = true
+        let vc = viewControllers[selectedIndex]
+        addChildViewController(vc)
+        
+        //set the size of the view to that of the content view
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        vc.didMoveToParentViewController(self)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
