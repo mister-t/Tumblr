@@ -15,6 +15,7 @@
 		D6744C1B1D0AFACA001BD538 /* TumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6744C1A1D0AFACA001BD538 /* TumblrTests.swift */; };
 		D6744C261D0AFACA001BD538 /* TumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6744C251D0AFACA001BD538 /* TumblrUITests.swift */; };
 		D6744C351D0B019A001BD538 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6744C341D0B019A001BD538 /* TabBarViewController.swift */; };
+		D6744C391D0B959F001BD538 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6744C381D0B959F001BD538 /* TrendingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D6744C251D0AFACA001BD538 /* TumblrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrUITests.swift; sourceTree = "<group>"; };
 		D6744C271D0AFACA001BD538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6744C341D0B019A001BD538 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D6744C381D0B959F001BD538 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D6744C341D0B019A001BD538 /* TabBarViewController.swift */,
+				D6744C381D0B959F001BD538 /* TrendingViewController.swift */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6744C081D0AFACA001BD538 /* ViewController.swift in Sources */,
+				D6744C391D0B959F001BD538 /* TrendingViewController.swift in Sources */,
 				D6744C351D0B019A001BD538 /* TabBarViewController.swift in Sources */,
 				D6744C061D0AFACA001BD538 /* AppDelegate.swift in Sources */,
 			);

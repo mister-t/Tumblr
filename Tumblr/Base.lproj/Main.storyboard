@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="464" y="1017"/>
         </scene>
-        <!--View Controller-->
+        <!--Trending View Controller-->
         <scene sceneID="zxQ-25-Cck">
             <objects>
-                <viewController storyboardIdentifier="TrendingViewController" id="i8c-Ji-p19" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrendingViewController" id="i8c-Ji-p19" customClass="TrendingViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CFp-no-8UC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,6 +146,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="yj6-jG-XBm" id="BTa-Sa-8s5"/>
+                        <outlet property="scrollView" destination="UnY-qh-g1L" id="wL6-CI-bJQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7W9-14-udE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
