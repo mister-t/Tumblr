@@ -26,7 +26,7 @@ class TabBarViewController: UIViewController {
         super.viewDidLoad()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
+        
         //home view
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
             addChildViewController(homeViewController)
@@ -56,6 +56,9 @@ class TabBarViewController: UIViewController {
             addChildViewController(trendingViewController)
             contentView.addSubview(trendingViewController.view)
         trendingViewController.didMoveToParentViewController(self)
+        
+        viewControllers = [homeViewController, searchViewController, composeViewController, acctViewController, trendingViewController]
+
     }
 
     override func didReceiveMemoryWarning() {
