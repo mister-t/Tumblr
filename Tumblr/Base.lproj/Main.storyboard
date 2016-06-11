@@ -27,22 +27,22 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="selected" image="home_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vyU-lN-NtO">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vyU-lN-NtO">
                                         <rect key="frame" x="66" y="4" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="search_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="luN-ky-ynw">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="luN-ky-ynw">
                                         <rect key="frame" x="272" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="trending_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CSE-t3-WMM">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CSE-t3-WMM">
                                         <rect key="frame" x="135" y="4" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="compose_button"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1h-Wx-fqn">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1h-Wx-fqn">
                                         <rect key="frame" x="211" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="account_icon"/>
@@ -55,6 +55,11 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="JHD-xI-Nl5" id="tQR-By-vlq"/>
+                        <outletCollection property="buttons" destination="QBi-D8-CZv" collectionClass="NSMutableArray" id="q7e-01-csO"/>
+                        <outletCollection property="buttons" destination="vyU-lN-NtO" collectionClass="NSMutableArray" id="aeV-dP-TXO"/>
+                        <outletCollection property="buttons" destination="luN-ky-ynw" collectionClass="NSMutableArray" id="PeF-gP-Mur"/>
+                        <outletCollection property="buttons" destination="CSE-t3-WMM" collectionClass="NSMutableArray" id="OqL-Ts-BdX"/>
+                        <outletCollection property="buttons" destination="T1h-Wx-fqn" collectionClass="NSMutableArray" id="LwC-Sy-Wry"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,6 +11,10 @@ import UIKit
 class TabBarViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView! //the view where everything is shown
+    @IBOutlet var buttons: [UIButton]!
+    var viewControllers: [UIViewController]!
+
+    var selectedIndex: Int = 0 //selected button on the tab bar
 
     var homeViewController: UIViewController! //view controller for the 'home' button
     var searchViewController: UIViewController! //view controller for the 'search' button
@@ -22,7 +26,7 @@ class TabBarViewController: UIViewController {
         super.viewDidLoad()
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
+            
         //home view
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
             addChildViewController(homeViewController)
