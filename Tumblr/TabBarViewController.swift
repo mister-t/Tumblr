@@ -21,11 +21,14 @@ class TabBarViewController: UIViewController {
     var composeViewController: UIViewController! //view controller for the 'compose' button
     var acctViewController: UIViewController! //view controller for the 'account' button
     var trendingViewController: UIViewController! //view controller for the 'trending' button
+    var previousSelected: Int = 0
     
     @IBAction func didPressTab(sender: UIButton) {
 
         //save previous selected index
         let previousIndex = selectedIndex
+        previousSelected = previousIndex
+        
         selectedIndex = sender.tag
         print("button tabbed: \(selectedIndex)")
         buttons[previousIndex].selected = false
@@ -90,14 +93,13 @@ class TabBarViewController: UIViewController {
         //Set the initial view
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
