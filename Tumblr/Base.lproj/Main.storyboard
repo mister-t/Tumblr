@@ -62,6 +62,78 @@
             <point key="canvasLocation" x="162" y="366"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="GgS-GO-uVx">
+            <objects>
+                <viewController storyboardIdentifier="ComposeViewController" id="f0y-5N-2ef" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hQy-ft-JZV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nevermind" id="t2p-jm-BTb">
+                                <rect key="frame" x="0.0" y="515" width="320" height="53"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="chat_icon" id="TbH-2d-fAo">
+                                <rect key="frame" x="123" y="276" width="75" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="link_icon" id="UVp-bK-Jjx">
+                                <rect key="frame" x="20" y="276" width="75" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_icon" id="zee-PB-N8d">
+                                <rect key="frame" x="123" y="157" width="75" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="quote_icon" id="2kp-VT-BWL">
+                                <rect key="frame" x="225" y="157" width="75" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="text_icon" id="rKR-0j-cBz">
+                                <rect key="frame" x="20" y="157" width="75" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="video_icon" id="AEN-98-XSy">
+                                <rect key="frame" x="225" y="276" width="75" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18750203975402291" green="0.24663435279740137" blue="0.33737373737373733" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdB-x6-ZFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="1024"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a4s-v1-Pbs">
+            <objects>
+                <viewController storyboardIdentifier="AccountViewController" id="zvS-Fs-Nge" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q7k-0a-ECq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJg-Rf-vip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="1017"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zxQ-25-Cck">
+            <objects>
+                <viewController storyboardIdentifier="TrendingViewController" id="i8c-Ji-p19" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFp-no-8UC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7W9-14-udE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="1014"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="W2h-Sk-gYY">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="VS7-J0-WXk" sceneMemberID="viewController">
@@ -89,15 +161,43 @@
             </objects>
             <point key="canvasLocation" x="515" y="367"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="C9B-fM-bxU">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="xCh-pf-e54" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nSU-Vr-LTO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="search_feed" id="YnJ-an-Did">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fh6-Ua-okW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="367"/>
+        </scene>
     </scenes>
     <resources>
         <image name="account_icon" width="35" height="35"/>
+        <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
         <image name="home_spinner" width="146" height="146"/>
+        <image name="link_icon" width="75" height="95"/>
+        <image name="nevermind" width="320" height="53"/>
+        <image name="photo_icon" width="75" height="95"/>
+        <image name="quote_icon" width="75" height="96"/>
+        <image name="search_feed" width="320" height="524"/>
         <image name="search_icon" width="35" height="35"/>
+        <image name="text_icon" width="75" height="95"/>
         <image name="trending_icon" width="35" height="35"/>
+        <image name="video_icon" width="75" height="95"/>
     </resources>
 </document>
