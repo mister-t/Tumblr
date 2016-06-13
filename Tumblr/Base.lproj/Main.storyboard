@@ -196,6 +196,34 @@
             </objects>
             <point key="canvasLocation" x="842" y="1014"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="4Yc-Qm-YOh">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="JWA-zm-dKh" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.75" contentMode="scaleToFill" id="KYA-gB-jRi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="2tV-mg-1p3">
+                                <rect key="frame" x="10" y="139" width="300" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hWp-PL-pCc">
+                                <rect key="frame" x="10" y="227" width="146" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onCancelTabbed:" destination="JWA-zm-dKh" eventType="touchUpInside" id="Rrj-qJ-ZJb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nqq-BZ-eZT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0g-2J-GHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="1033"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="W2h-Sk-gYY">
             <objects>
@@ -216,6 +244,13 @@
                                 <rect key="frame" x="88" y="162" width="146" height="146"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JDR-DO-krD">
+                                <rect key="frame" x="253" y="20" width="67" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="iiq-NN-PJ2" kind="modal" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="AT5-XM-HdS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -244,6 +279,24 @@
             </objects>
             <point key="canvasLocation" x="879" y="367"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DML-Hb-NMA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="iiq-NN-PJ2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QlA-d6-Z0y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JWA-zm-dKh" kind="relationship" relationship="rootViewController" id="FNr-LZ-tkS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCs-yG-fWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="1033"/>
+        </scene>
     </scenes>
     <resources>
         <image name="account" width="320" height="524"/>
@@ -257,6 +310,7 @@
         <image name="home_selected_icon" width="35" height="35"/>
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>
