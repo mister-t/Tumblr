@@ -23,8 +23,50 @@ class TabBarViewController: UIViewController {
     var trendingViewController: UIViewController! //view controller for the 'trending' button
     var previousSelected: Int = 0
     
-    @IBAction func didPressTab(sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //home view
+        homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
+//            addChildViewController(homeViewController)
+//            contentView.addSubview(homeViewController.view)
+//        homeViewController.didMoveToParentViewController(self)
+        
+        //search view
+        searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
+//            addChildViewController(searchViewController)
+//            contentView.addSubview(searchViewController.view)
+//        searchViewController.didMoveToParentViewController(self)
+        
+        //compose view
+        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
+//            addChildViewController(composeViewController)
+//            contentView.addSubview(composeViewController.view)
+//        composeViewController.didMoveToParentViewController(self)
+        
+        //acct view
+        acctViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
+//            addChildViewController(acctViewController)
+//            contentView.addSubview(acctViewController.view)
+//        acctViewController.didMoveToParentViewController(self)
+        
+        //trending view
+        trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
+//            addChildViewController(trendingViewController)
+//            contentView.addSubview(trendingViewController.view)
+//        trendingViewController.didMoveToParentViewController(self)
+        
+        viewControllers = [homeViewController, searchViewController, composeViewController, acctViewController, trendingViewController]
+        
+        //Set the initial view
+        buttons[selectedIndex].selected = true
+        didPressTab(buttons[selectedIndex])
+    }
+    
+    @IBAction func didPressTab(sender: UIButton) {
+        
         //save previous selected index
         let previousIndex = selectedIndex
         previousSelected = previousIndex
@@ -50,51 +92,9 @@ class TabBarViewController: UIViewController {
         
         //Call the viewDidAppear method of the ViewController you are adding using but calling didMoveToParentViewController
         vc.didMoveToParentViewController(self)
-
+        
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        //home view
-        homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
-            addChildViewController(homeViewController)
-            contentView.addSubview(homeViewController.view)
-        homeViewController.didMoveToParentViewController(self)
-        
-        //search view
-        searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
-            addChildViewController(searchViewController)
-            contentView.addSubview(searchViewController.view)
-        searchViewController.didMoveToParentViewController(self)
-        
-        //compose view
-        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
-            addChildViewController(composeViewController)
-            contentView.addSubview(composeViewController.view)
-        composeViewController.didMoveToParentViewController(self)
-        
-        //acct view
-        acctViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
-            addChildViewController(acctViewController)
-            contentView.addSubview(acctViewController.view)
-        acctViewController.didMoveToParentViewController(self)
-        
-        //trending view
-        trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
-            addChildViewController(trendingViewController)
-            contentView.addSubview(trendingViewController.view)
-        trendingViewController.didMoveToParentViewController(self)
-        
-        viewControllers = [homeViewController, searchViewController, composeViewController, acctViewController, trendingViewController]
-        
-        //Set the initial view
-        buttons[selectedIndex].selected = true
-        didPressTab(buttons[selectedIndex])
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
