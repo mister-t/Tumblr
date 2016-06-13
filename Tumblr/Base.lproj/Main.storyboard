@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -90,8 +90,8 @@
         <!--Compose View Controller-->
         <scene sceneID="GgS-GO-uVx">
             <objects>
-                <viewController storyboardIdentifier="ComposeViewController" id="f0y-5N-2ef" customClass="ComposeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hQy-ft-JZV">
+                <viewController storyboardIdentifier="ComposeViewController" modalPresentationStyle="overCurrentContext" id="f0y-5N-2ef" customClass="ComposeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.65000000000000002" contentMode="scaleToFill" id="hQy-ft-JZV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -133,6 +133,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.18750203975402291" green="0.24663435279740137" blue="0.33737373737373733" alpha="0.5" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chatIconImageView" destination="TbH-2d-fAo" id="BXh-0q-M41"/>
+                        <outlet property="linkIconImageView" destination="UVp-bK-Jjx" id="OyZ-df-6ss"/>
+                        <outlet property="photoIconImageView" destination="zee-PB-N8d" id="goJ-ay-BY6"/>
+                        <outlet property="quoteIconImageView" destination="2kp-VT-BWL" id="G2g-TU-vxW"/>
+                        <outlet property="textIconImageView" destination="rKR-0j-cBz" id="4gy-hH-6bx"/>
+                        <outlet property="videoIconImageView" destination="AEN-98-XSy" id="8uC-CW-QXp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdB-x6-ZFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
