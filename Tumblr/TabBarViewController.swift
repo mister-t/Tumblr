@@ -41,7 +41,7 @@ class TabBarViewController: UIViewController {
 //        searchViewController.didMoveToParentViewController(self)
         
         //compose view
-        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
+//        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
 //            addChildViewController(composeViewController)
 //            contentView.addSubview(composeViewController.view)
 //        composeViewController.didMoveToParentViewController(self)
@@ -58,7 +58,8 @@ class TabBarViewController: UIViewController {
 //            contentView.addSubview(trendingViewController.view)
 //        trendingViewController.didMoveToParentViewController(self)
         
-        viewControllers = [homeViewController, searchViewController, composeViewController, acctViewController, trendingViewController]
+//        viewControllers = [homeViewController, searchViewController, composeViewController, acctViewController, trendingViewController]
+        viewControllers = [homeViewController, searchViewController, acctViewController, trendingViewController]
         
         //Set the initial view
         buttons[selectedIndex].selected = true

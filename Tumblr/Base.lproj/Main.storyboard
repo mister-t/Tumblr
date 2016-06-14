@@ -40,7 +40,7 @@
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGb-ce-KFM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="luN-ky-ynw">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="luN-ky-ynw">
                                         <rect key="frame" x="272" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="trending_icon"/>
@@ -58,13 +58,20 @@
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YSc-8B-v6E"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1h-Wx-fqn">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1h-Wx-fqn">
                                         <rect key="frame" x="211" y="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="account_icon"/>
                                         <state key="selected" image="account_selected_icon"/>
                                         <connections>
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIW-Fe-6Mb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vzQ-Vu-f3b">
+                                        <rect key="frame" x="135" y="0.0" width="50" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="f0y-5N-2ef" kind="modal" id="9is-s9-win"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -90,7 +97,7 @@
         <scene sceneID="GgS-GO-uVx">
             <objects>
                 <viewController storyboardIdentifier="ComposeViewController" modalPresentationStyle="overCurrentContext" id="f0y-5N-2ef" customClass="ComposeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="hQy-ft-JZV">
+                    <view key="view" contentMode="scaleToFill" id="hQy-ft-JZV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -143,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdB-x6-ZFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="1017"/>
+            <point key="canvasLocation" x="86" y="1052"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="a4s-v1-Pbs">
