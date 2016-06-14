@@ -26,15 +26,16 @@ class TabBarViewController: UIViewController {
     var previousSelected: Int = 0
     var searchViewIdx: Int = 1
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(animated: Bool) {
         UIView.animateWithDuration(0.8, delay: 0.0,
             // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
             options: [UIViewAnimationOptions.Autoreverse,
                 UIViewAnimationOptions.Repeat], animations: { () -> Void in
                     self.bubbleImageView.transform = CGAffineTransformMakeTranslation(0, 10)
             }, completion: nil)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -97,9 +98,13 @@ class TabBarViewController: UIViewController {
             bubbleImageView.alpha = 0
         } else {
             bubbleImageView.alpha = 1
+            UIView.animateWithDuration(0.8, delay: 0.0,
+                // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+                options: [UIViewAnimationOptions.Autoreverse,
+                    UIViewAnimationOptions.Repeat], animations: { () -> Void in
+                        self.bubbleImageView.transform = CGAffineTransformMakeTranslation(0, 10)
+                }, completion: nil)
         }
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

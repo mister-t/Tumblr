@@ -35,27 +35,27 @@ class SearchViewController: UIViewController {
         searchFeed.alpha = 0
         loadingImageView.alpha = 1
         parentView.alpha = 1
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        loading_1 = UIImage(named: "loading-1")
-        loading_2 = UIImage(named: "loading-2")
-        loading_3 = UIImage(named: "loading-3")
-
-        images = [loading_1, loading_2, loading_3]
-
-        animatedImage = UIImage.animatedImageWithImages(images, duration: 1.0)
-
-        loadingImageView.image = animatedImage
-        
+  
         delay(2) {
             self.searchFeed.alpha = 1
             self.loadingImageView.alpha = 0
             self.parentView.alpha = 0
+            
+            
+            self.loading_1 = UIImage(named: "loading-1")
+            self.loading_2 = UIImage(named: "loading-2")
+            self.loading_3 = UIImage(named: "loading-3")
+            
+            self.images = [self.loading_1, self.loading_2, self.loading_3]
+            
+            self.animatedImage = UIImage.animatedImageWithImages(self.images, duration: 1.0)
+            
+            self.loadingImageView.image = self.animatedImage
         }
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
