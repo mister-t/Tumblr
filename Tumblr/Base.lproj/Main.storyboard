@@ -77,10 +77,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="svv-5q-bHo">
+                                <rect key="frame" x="-4" y="445" width="185" height="77"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bubbleImageView" destination="svv-5q-bHo" id="hnO-d1-hRb"/>
                         <outlet property="contentView" destination="JHD-xI-Nl5" id="tQR-By-vlq"/>
                         <outletCollection property="buttons" destination="QBi-D8-CZv" collectionClass="NSMutableArray" id="q7e-01-csO"/>
                         <outletCollection property="buttons" destination="vyU-lN-NtO" collectionClass="NSMutableArray" id="aeV-dP-TXO"/>
@@ -320,6 +325,7 @@
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>

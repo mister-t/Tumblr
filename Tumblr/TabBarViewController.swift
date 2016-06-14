@@ -12,6 +12,8 @@ class TabBarViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView! //the view where everything is shown
     @IBOutlet var buttons: [UIButton]!
+    @IBOutlet weak var bubbleImageView: UIImageView!
+    
     var viewControllers: [UIViewController]!
 
     var selectedIndex: Int = 0 //selected button on the tab bar
@@ -25,7 +27,14 @@ class TabBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [UIViewAnimationOptions.Autoreverse,
+                UIViewAnimationOptions.Repeat], animations: { () -> Void in
+                    self.bubbleImageView.transform = CGAffineTransformMakeTranslation(0, 10)
+            }, completion: nil)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         //home view
