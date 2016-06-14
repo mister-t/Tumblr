@@ -255,7 +255,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="onLoginTabbed:" destination="VS7-J0-WXk" eventType="touchUpInside" id="lcw-AR-EcB"/>
-                                    <segue destination="JWA-zm-dKh" kind="modal" identifier="LoginSegue" id="HWS-fO-Twk"/>
+                                    <segue destination="JWA-zm-dKh" kind="modal" identifier="LoginSegue" modalTransitionStyle="crossDissolve" id="HWS-fO-Twk"/>
                                 </connections>
                             </button>
                         </subviews>
