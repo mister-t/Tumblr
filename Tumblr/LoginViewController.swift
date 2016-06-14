@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onCancelTabbed(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*

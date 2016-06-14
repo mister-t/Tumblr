@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Tumblr
 //
-//  Created by Tony Yeung on 6/10/16.
+//  Created by Tony Yeung on 6/13/16.
 //  Copyright © 2016 Tony Yeung. All rights reserved.
 //
 
@@ -21,6 +21,9 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onLoginTabbed(sender: AnyObject) {
+        self.performSegueWithIdentifier("LoginSegue", sender: self)
+    }
 
     /*
     // MARK: - Navigation

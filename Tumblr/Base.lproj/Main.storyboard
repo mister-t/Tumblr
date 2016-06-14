@@ -200,7 +200,7 @@
         <scene sceneID="4Yc-Qm-YOh">
             <objects>
                 <viewController modalPresentationStyle="overCurrentContext" id="JWA-zm-dKh" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.75" contentMode="scaleToFill" id="KYA-gB-jRi">
+                    <view key="view" contentMode="scaleToFill" id="KYA-gB-jRi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -216,18 +216,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="nqq-BZ-eZT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0g-2J-GHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1842" y="1033"/>
+            <point key="canvasLocation" x="925" y="366"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="W2h-Sk-gYY">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="VS7-J0-WXk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="VS7-J0-WXk" customClass="HomeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bhd-wa-uS9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,8 @@
                                 <rect key="frame" x="253" y="20" width="67" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="iiq-NN-PJ2" kind="modal" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="AT5-XM-HdS"/>
+                                    <action selector="onLoginTabbed:" destination="VS7-J0-WXk" eventType="touchUpInside" id="lcw-AR-EcB"/>
+                                    <segue destination="JWA-zm-dKh" kind="modal" identifier="LoginSegue" id="HWS-fO-Twk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -277,25 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fh6-Ua-okW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="367"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DML-Hb-NMA">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="iiq-NN-PJ2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QlA-d6-Z0y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JWA-zm-dKh" kind="relationship" relationship="rootViewController" id="FNr-LZ-tkS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KCs-yG-fWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1310" y="1033"/>
+            <point key="canvasLocation" x="1619" y="315"/>
         </scene>
     </scenes>
     <resources>
