@@ -11,6 +11,7 @@ import UIKit
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchFeed: UIImageView!
+    @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var loadingImageView: UIImageView!
     
     var loading_1: UIImage!
@@ -33,6 +34,7 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         searchFeed.alpha = 0
         loadingImageView.alpha = 1
+        parentView.alpha = 1
     }
     
     override func viewDidLoad() {
@@ -51,6 +53,7 @@ class SearchViewController: UIViewController {
         delay(2) {
             self.searchFeed.alpha = 1
             self.loadingImageView.alpha = 0
+            self.parentView.alpha = 0
         }
         // Do any additional setup after loading the view.
     }

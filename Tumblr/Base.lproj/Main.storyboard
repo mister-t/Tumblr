@@ -310,16 +310,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-1" id="Swp-Sk-s5z">
-                                <rect key="frame" x="130" y="252" width="61" height="19"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" id="AHB-o9-kZ1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-1" id="Swp-Sk-s5z">
+                                        <rect key="frame" x="130" y="274" width="61" height="19"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.20784313725490197" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="loadingImageView" destination="Swp-Sk-s5z" id="2iS-Mx-VPs"/>
+                        <outlet property="parentView" destination="AHB-o9-kZ1" id="dP1-4w-Cec"/>
                         <outlet property="searchFeed" destination="YnJ-an-Did" id="qXC-gR-ggw"/>
                     </connections>
                 </viewController>
