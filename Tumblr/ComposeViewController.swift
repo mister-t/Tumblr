@@ -23,7 +23,7 @@ class ComposeViewController: UIViewController {
         quoteOriginalY: CGFloat!,
         textOriginalY: CGFloat!,
         videoOriginalY: CGFloat!,
-        moveOutY: CGFloat = -600,
+        moveOutY: CGFloat = 600,
         moveInY: CGFloat = 600
     
     override func viewWillAppear(animated: Bool) {
@@ -86,31 +86,33 @@ class ComposeViewController: UIViewController {
     
     @IBAction func didPressDismiss(sender: AnyObject) {
         
-        UIView.animateWithDuration(0.65) { () -> Void in
-            self.chatIconImageView.frame.origin.y = self.chatOriginalY + self.moveOutY
+        UIView.animateWithDuration(0.6) { () -> Void in
+            self.chatIconImageView.center.y -= self.moveOutY
         }
         
         UIView.animateWithDuration(0.6) { () -> Void in
-            self.linkIconImageView.frame.origin.y = self.linkOriginalY + self.moveOutY
+            self.linkIconImageView.center.y -= self.moveOutY
         }
         
         UIView.animateWithDuration(0.55) { () -> Void in
-            self.photoIconImageView.frame.origin.y = self.photoOriginalY + self.moveOutY
+            self.photoIconImageView.center.y -= self.moveOutY
         }
         
         UIView.animateWithDuration(0.5) { () -> Void in
-            self.quoteIconImageView.frame.origin.y = self.quoteOriginalY + self.moveOutY
+            self.quoteIconImageView.center.y -= self.moveOutY
         }
         
         UIView.animateWithDuration(0.45) { () -> Void in
-            self.textIconImageView.frame.origin.y = self.textOriginalY + self.moveOutY
+            self.textIconImageView.center.y -= self.moveOutY
         }
         
-        UIView.animateWithDuration(0.4) { () -> Void in
-            self.videoIconImageView.frame.origin.y = self.videoOriginalY + self.moveOutY
+        UIView.animateWithDuration(0.4, animations: {
+            self.videoIconImageView.center.y -= self.moveOutY
+            }) { _ in
+                
+            //cleaned up the view without animation in the completion block
+            self.dismissViewControllerAnimated(false, completion: nil)
         }
-
-        dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*

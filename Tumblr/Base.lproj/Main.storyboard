@@ -71,7 +71,7 @@
                                         <rect key="frame" x="135" y="0.0" width="50" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="f0y-5N-2ef" kind="modal" id="9is-s9-win"/>
+                                            <segue destination="f0y-5N-2ef" kind="modal" identifier="ComposeSegue" animates="NO" id="9is-s9-win"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJg-Rf-vip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="1017"/>
+            <point key="canvasLocation" x="475" y="1052"/>
         </scene>
         <!--Trending View Controller-->
         <scene sceneID="zxQ-25-Cck">
