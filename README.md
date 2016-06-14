@@ -13,9 +13,9 @@ Time spent: 10 hours`
 
 #### Optional
 
-- [ ] Compose screen is faded in while the buttons animate in.
-- [ ] Login button should show animate the login form over the view controller.
-- [ ] Discover bubble should bob up and down unless the SearchViewController is tapped.
+- [X] Compose screen is faded in while the buttons animate in.
+- [X] Login button should show animate the login form over the view controller.
+- [X] Discover bubble should bob up and down unless the SearchViewController is tapped.
 
 #### The following **additional** features are implemented:
 
