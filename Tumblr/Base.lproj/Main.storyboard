@@ -205,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7W9-14-udE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="1014"/>
+            <point key="canvasLocation" x="841" y="1052"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4Yc-Qm-YOh">
@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="515" y="367"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="C9B-fM-bxU">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="xCh-pf-e54" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="xCh-pf-e54" customClass="SearchViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nSU-Vr-LTO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,13 +310,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="loading-1" id="Swp-Sk-s5z">
+                                <rect key="frame" x="130" y="252" width="61" height="19"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="loadingImageView" destination="Swp-Sk-s5z" id="2iS-Mx-VPs"/>
+                        <outlet property="searchFeed" destination="YnJ-an-Did" id="qXC-gR-ggw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fh6-Ua-okW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1619" y="315"/>
+            <point key="canvasLocation" x="1210" y="1052"/>
         </scene>
     </scenes>
     <resources>
@@ -332,6 +341,7 @@
         <image name="home_selected_icon" width="35" height="35"/>
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
+        <image name="loading-1" width="61" height="19"/>
         <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>

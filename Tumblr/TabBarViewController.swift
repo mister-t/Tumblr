@@ -24,6 +24,7 @@ class TabBarViewController: UIViewController {
     var acctViewController: UIViewController! //view controller for the 'account' button
     var trendingViewController: UIViewController! //view controller for the 'trending' button
     var previousSelected: Int = 0
+    var searchViewIdx: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,35 +40,18 @@ class TabBarViewController: UIViewController {
         
         //home view
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController")
-//            addChildViewController(homeViewController)
-//            contentView.addSubview(homeViewController.view)
-//        homeViewController.didMoveToParentViewController(self)
         
         //search view
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
-//            addChildViewController(searchViewController)
-//            contentView.addSubview(searchViewController.view)
-//        searchViewController.didMoveToParentViewController(self)
         
-        //compose view
-//        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController")
-//            addChildViewController(composeViewController)
-//            contentView.addSubview(composeViewController.view)
-//        composeViewController.didMoveToParentViewController(self)
+        //compose view not instantiated as it's being called as a modal
         
         //acct view
         acctViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController")
-//            addChildViewController(acctViewController)
-//            contentView.addSubview(acctViewController.view)
-//        acctViewController.didMoveToParentViewController(self)
         
         //trending view
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
-//            addChildViewController(trendingViewController)
-//            contentView.addSubview(trendingViewController.view)
-//        trendingViewController.didMoveToParentViewController(self)
         
-//        viewControllers = [homeViewController, searchViewController, composeViewController, acctViewController, trendingViewController]
         viewControllers = [homeViewController, searchViewController, acctViewController, trendingViewController]
         
         //Set the initial view
@@ -84,6 +68,9 @@ class TabBarViewController: UIViewController {
         selectedIndex = sender.tag
         print("button tabbed: \(selectedIndex)")
         buttons[previousIndex].selected = false
+        
+        //hide or show the buble
+        hideShowBubble(selectedIndex, targetIdx: searchViewIdx)
         
         //erase previous view
         let previousVC = viewControllers[previousIndex]
@@ -102,6 +89,16 @@ class TabBarViewController: UIViewController {
         
         //Call the viewDidAppear method of the ViewController you are adding using but calling didMoveToParentViewController
         vc.didMoveToParentViewController(self)
+        
+    }
+    
+    func hideShowBubble (currIndx: Int, targetIdx: Int) {
+        if currIndx == targetIdx {
+            bubbleImageView.alpha = 0
+        } else {
+            bubbleImageView.alpha = 1
+        }
+        
         
     }
     
