@@ -210,23 +210,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="2tV-mg-1p3">
-                                <rect key="frame" x="10" y="139" width="300" height="132"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hWp-PL-pCc">
-                                <rect key="frame" x="10" y="227" width="146" height="44"/>
+                            <view contentMode="scaleToFill" id="rsN-DF-zNB">
+                                <rect key="frame" x="0.0" y="212" width="320" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="onCancelTabbed:" destination="JWA-zm-dKh" eventType="touchUpInside" id="Rrj-qJ-ZJb"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="2tV-mg-1p3">
+                                        <rect key="frame" x="8" y="7" width="300" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hWp-PL-pCc">
+                                        <rect key="frame" x="8" y="95" width="146" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="onCancelTabbed:" destination="JWA-zm-dKh" eventType="touchUpInside" id="Rrj-qJ-ZJb"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" id="kVx-le-TL5">
+                                        <rect key="frame" x="8" y="8" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.20784313725490197" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.20392156862745098" blue="0.28627450980392155" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cid-UX-ny8" appends="YES" id="SaJ-oj-qlt"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="nqq-BZ-eZT"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="kVx-le-TL5" id="lKF-A4-QZO"/>
+                        <outlet property="fieldParentView" destination="rsN-DF-zNB" id="Nu2-V1-0Pp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0g-2J-GHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cid-UX-ny8">
+                    <connections>
+                        <action selector="onTapOutside:" destination="JWA-zm-dKh" id="GiR-uz-9bZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="925" y="366"/>
         </scene>
